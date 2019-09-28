@@ -1,55 +1,98 @@
-<form action="//submit.form" id="EmploymentApplication100" method="post" onsubmit="return ValidateForm(this);">
-<script type="text/javascript">
-function ValidateForm(frm) {
-if (frm.First_Name.value == "") { alert('First name is required.'); frm.First_Name.focus(); return false; }
-if (frm.Last_Name.value == "") { alert('Last name is required.'); frm.Last_Name.focus(); return false; }
-if (frm.Email_Address.value == "") { alert('Email address is required.'); frm.Email_Address.focus(); return false; }
-if (frm.Email_Address.value.indexOf("@") < 1 || frm.Email_Address.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.Email_Address.focus(); return false; }
-if (frm.Position.value == "") { alert('Position is required.'); frm.Position.focus(); return false; }
-if (frm.Phone.value == "") { alert('Phone is required.'); frm.Phone.focus(); return false; }
-return true; }
-</script>
-<table border="0" cellpadding="5" cellspacing="0">
-<tr> <td style="width: 50%">
-<label for="First_Name"><b>First name *</b></label><br />
-<input name="First_Name" type="text" maxlength="50" style="width: 260px" />
-</td> <td style="width: 50%">
-<label for="Last_Name"><b>Last name *</b></label><br />
-<input name="Last_Name" type="text" maxlength="50" style="width: 260px" />
-</td> </tr> <tr> <td colspan="2">
-<label for="Email_Address"><b>Email *</b></label><br />
-<input name="Email_Address" type="text" maxlength="100" style="width: 535px" />
-</td> </tr> <tr> <td colspan="2">
-<label for="Portfolio"><b>Portfolio website</b></label><br />
-<input name="Portfolio" type="text" maxlength="255" value="http://" style="width: 535px" />
-</td> </tr> <tr> <td colspan="2">
-<label for="Position"><b>Position you are applying for *</b></label><br />
-<input name="Position" type="text" maxlength="100" style="width: 535px" />
-</td> </tr> <tr> <td>
-<label for="Salary"><b>Salary requirements</b></label><br /> <input name="Salary" type="text" maxlength="50" style="width: 260px" /> </td> <td>
-<label for="StartDate"><b>When can you start?</b></label><br />
-<input name="StartDate" type="text" maxlength="50" style="width: 260px" />
-</td> </tr> <tr> <td>
-<label for="Phone"><b>Phone *</b></label><br />
-<input name="Phone" type="text" maxlength="50" style="width: 260px" />
-</td> <td>
-<label for="Fax"><b>Fax</b></label><br />
-<input name="Fax" type="text" maxlength="50" style="width: 260px" />
-</td> </tr> <tr> <td colspan="2">
-<label for="Relocate"><b>Are you willing to relocate?</b></label><br />
-<input name="Relocate" type="radio" value="Yes" checked="checked" /> Yes      
-<input name="Relocate" type="radio" value="No" /> No      
-<input name="Relocate" type="radio" value="NotSure" /> Not sure
-</td> </tr> <tr> <td colspan="2">
-<label for="Organization"><b>Last company you worked for</b></label><br />
-<input name="Organization" type="text" maxlength="100" style="width: 535px" />
-</td> </tr> <tr> <td colspan="2">
-<label for="Reference"><b>Reference / Comments / Questions</b></label><br />
-<textarea name="Reference" rows="7" cols="40" style="width: 535px"></textarea>
-</td> </tr> <tr> <td colspan="2" style="text-align: center;">
-<div style="float: right"> <a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
-<script src="https://www.100forms.com/js/FORMKEY:Z2WGZGZ353XX/SEND:my@email.com" type="text/javascript"></script>
-<input name="skip_submit" type="submit" value="Send Application" />
-</td> </tr>
-</table>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: blue;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<form action="/action_page.php">
+  <div class="container">
+    <h1>Green city Register Form</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
 </form>
+
+</body>
+</html>
