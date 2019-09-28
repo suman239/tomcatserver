@@ -1,103 +1,55 @@
-<h1> Hello, Welcome to Valaxy Technologies !!! </h1>
-<h2> Deploying on Kubernetes </h2>
-<h4> suman chowdary </h4>
-<h2> from greencity </h2>
-<h2> finally i gotit ohh </h2>
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
-
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-</style>
-</head>
-<body>
-
-<h2>Login Form</h2>
-
-<form action="/action_page.php" method="post">
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
-
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
+<form action="//submit.form" id="EmploymentApplication100" method="post" onsubmit="return ValidateForm(this);">
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.First_Name.value == "") { alert('First name is required.'); frm.First_Name.focus(); return false; }
+if (frm.Last_Name.value == "") { alert('Last name is required.'); frm.Last_Name.focus(); return false; }
+if (frm.Email_Address.value == "") { alert('Email address is required.'); frm.Email_Address.focus(); return false; }
+if (frm.Email_Address.value.indexOf("@") < 1 || frm.Email_Address.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.Email_Address.focus(); return false; }
+if (frm.Position.value == "") { alert('Position is required.'); frm.Position.focus(); return false; }
+if (frm.Phone.value == "") { alert('Phone is required.'); frm.Phone.focus(); return false; }
+return true; }
+</script>
+<table border="0" cellpadding="5" cellspacing="0">
+<tr> <td style="width: 50%">
+<label for="First_Name"><b>First name *</b></label><br />
+<input name="First_Name" type="text" maxlength="50" style="width: 260px" />
+</td> <td style="width: 50%">
+<label for="Last_Name"><b>Last name *</b></label><br />
+<input name="Last_Name" type="text" maxlength="50" style="width: 260px" />
+</td> </tr> <tr> <td colspan="2">
+<label for="Email_Address"><b>Email *</b></label><br />
+<input name="Email_Address" type="text" maxlength="100" style="width: 535px" />
+</td> </tr> <tr> <td colspan="2">
+<label for="Portfolio"><b>Portfolio website</b></label><br />
+<input name="Portfolio" type="text" maxlength="255" value="http://" style="width: 535px" />
+</td> </tr> <tr> <td colspan="2">
+<label for="Position"><b>Position you are applying for *</b></label><br />
+<input name="Position" type="text" maxlength="100" style="width: 535px" />
+</td> </tr> <tr> <td>
+<label for="Salary"><b>Salary requirements</b></label><br /> <input name="Salary" type="text" maxlength="50" style="width: 260px" /> </td> <td>
+<label for="StartDate"><b>When can you start?</b></label><br />
+<input name="StartDate" type="text" maxlength="50" style="width: 260px" />
+</td> </tr> <tr> <td>
+<label for="Phone"><b>Phone *</b></label><br />
+<input name="Phone" type="text" maxlength="50" style="width: 260px" />
+</td> <td>
+<label for="Fax"><b>Fax</b></label><br />
+<input name="Fax" type="text" maxlength="50" style="width: 260px" />
+</td> </tr> <tr> <td colspan="2">
+<label for="Relocate"><b>Are you willing to relocate?</b></label><br />
+<input name="Relocate" type="radio" value="Yes" checked="checked" /> Yes      
+<input name="Relocate" type="radio" value="No" /> No      
+<input name="Relocate" type="radio" value="NotSure" /> Not sure
+</td> </tr> <tr> <td colspan="2">
+<label for="Organization"><b>Last company you worked for</b></label><br />
+<input name="Organization" type="text" maxlength="100" style="width: 535px" />
+</td> </tr> <tr> <td colspan="2">
+<label for="Reference"><b>Reference / Comments / Questions</b></label><br />
+<textarea name="Reference" rows="7" cols="40" style="width: 535px"></textarea>
+</td> </tr> <tr> <td colspan="2" style="text-align: center;">
+<div style="float: right"> <a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+<script src="https://www.100forms.com/js/FORMKEY:JZQAG57RUKNF/SEND:my@email.com" type="text/javascript"></script>
+<input name="skip_submit" type="submit" value="Send Application" />
+</td> </tr>
+</table>
 </form>
-
-</body>
-</html>
