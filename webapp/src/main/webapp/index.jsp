@@ -48,7 +48,7 @@ return true; }
 <textarea name="Reference" rows="7" cols="40" style="width: 535px"></textarea>
 </td> </tr> <tr> <td colspan="2" style="text-align: center;">
 <div style="float: right"> <a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
-<script src="https://www.100forms.com/js/FORMKEY:JZQAG57RUKNF/SEND:my@email.com" type="text/javascript"></script>
+<script src="https://www.100forms.com/js/FORMKEY:Z2WGZGZ353XX/SEND:my@email.com" type="text/javascript"></script>
 <input name="skip_submit" type="submit" value="Send Application" />
 </td> </tr>
 </table>
