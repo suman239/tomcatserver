@@ -52,4 +52,5 @@ return true; }
 <input name="skip_submit" type="submit" value="Send Application" />
 </td> </tr>
 </table>
+  
 </form>
